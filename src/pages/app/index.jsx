@@ -1,10 +1,10 @@
-import './index.css';
+import './index.scss';
 
 import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div className="pagina-app">
      <h1>Estudos de ReactJs
      <i className='fa fa-heart'></i>
      </h1>
