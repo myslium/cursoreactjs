@@ -1,0 +1,17 @@
+
+.pagina-nao-encontrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.titulo {
+    margin-top: 30px;
+}
+
+.fotopg {
+    position: relative;
+    width: 45rem;
+}

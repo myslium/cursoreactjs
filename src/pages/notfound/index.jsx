@@ -5,7 +5,8 @@ export default function NaoEncontrado() {
     return (
 
         <div className='pagina-nao-encontrada'>
-            <img src= '/assets/images/notfound.png' />
+            <h1 className='titulo'>Página não encontrada</h1>
+            <img className='fotopg'  src= '/assets/images/notfound.png' />
         </div>
     )
 }
