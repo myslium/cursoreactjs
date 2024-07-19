@@ -24,7 +24,155 @@
    
     }
 
-    .secao {
+    .secao-metas {
+        background-color: #fff;
+        padding: 40px;
+        box-shadow: 0px 0px 15px 2px #eeeeee;
+        margin: 50px 60px;
+        max-width: 1000px;
+        border-radius: 8px;
+        font: 400 24px 'Montserrat';
+    
+        h1 {
+          color: #404040;
+          font: 600 28px 'Montserrat';
+          margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #0084FF;
+            color: #fff;
+      
+            padding: 13px 30px ;
+            border-radius: 2px;
+            border: 2px solid #0084FF;
+            margin-left: 10px;
+            
+            font: 500 20px 'Montserrat';
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #606060;
+            border: 2px solid #0084FF;
+        }
+
+        input, select {
+            
+          color: #606060;
+          padding: 10px;
+          font: 400 24px 'Montserrat';
+          outline: none;
+          border-radius: 3px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: #e7e7e7;
+          min-width: 400px;
+        }
+
+        .entrada {
+            margin: 10px 0px;
+
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        i {
+            margin-right: 10px;
+           
+        }
+    }
+
+    .secao-ing{
+        background-color: #fff;
+        padding: 40px;
+        box-shadow: 0px 0px 15px 2px #eeeeee;
+        margin: 50px 60px;
+        max-width: 1000px;
+        border-radius: 8px;
+        font: 400 24px 'Montserrat';
+    
+        h1 {
+          color: #404040;
+          font: 600 28px 'Montserrat';
+          margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #0084FF;
+            color: #fff;
+      
+            padding: 13px 30px ;
+            border-radius: 2px;
+            border: 2px solid #0084FF;
+            
+            font: 500 20px 'Montserrat';
+            outline: none;
+        }
+
+        input, select {
+            
+          color: #606060;
+          padding: 10px;
+          font: 400 24px 'Montserrat';
+          outline: none;
+          border-radius: 3px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: #e7e7e7;
+          min-width: 400px;
+        }
+         
+        input[type=checkbox] {
+            min-width: auto;
+          }
+
+       
+        .entrada {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            gap: 10px;
+          
+            div {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                
+
+                label {
+                    width: 200px;
+                    text-align: right;
+                }
+
+                input[type = text] {
+                    min-width: auto;
+                    width: 200px;
+                }
+
+                button {
+                    width: 200px;
+                    transition: 0.2s ease-in-out;
+                }
+
+                button:hover {
+                    padding: 13px 30px ;
+
+                    border: 2px solid #0084FF;
+                    background-color: #fff;
+                    color: #606060;
+                }
+            }
+        }
+
+    }
+
+    .secao-calc {
         background-color: #fff;
         padding: 40px;
         box-shadow: 0px 0px 15px 2px #eeeeee;
@@ -48,6 +196,15 @@
             input {
                 min-width: auto;
                 width: 150px;
+                color: #606060;
+                padding: 10px;
+                font: 400 24px 'Montserrat';
+                outline: none;
+                border-radius: 3px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: #e7e7e7;
+                
             }
 
             .res {
@@ -59,9 +216,47 @@
                 text-align: center;
             }
 
-        
         }
 
+        button {
+            background-color: #0084FF;
+            color: #fff;
+      
+            padding: 8px 20px ;
+            border-radius: 2px;
+            border: 2px solid #0084FF;
+            margin-right: 20px;
+            
+            font: 500 20px 'Montserrat';
+            outline: none;
+
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover{
+            background-color: #fff;
+            color: #606060;
+            border: 2px solid #0084FF;
+
+        }
+    }
+
+    .secao {
+        background-color: #fff;
+        padding: 40px;
+        box-shadow: 0px 0px 15px 2px #eeeeee;
+        margin: 50px 60px;
+        max-width: 1000px;
+        border-radius: 8px;
+        font: 400 24px 'Montserrat';
+    
+        h1 {
+          color: #404040;
+          font: 600 28px 'Montserrat';
+          margin-bottom: 30px;
+        }
+
+        
         .cont {
             display: flex;
             align-items: center;

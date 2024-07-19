@@ -3,7 +3,7 @@ import './index.scss'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { tratarNumber } from '../../utils/conversao'
-
+import { calcularTotalIngresso } from '../services/ingressos'
 
 export default function VarEstado() {
 
@@ -17,6 +17,58 @@ export default function VarEstado() {
    const [num1, setNum1] = useState(0)
    const [num2, setNum2] = useState(0)
    const [res, setRes] = useState(0)
+
+   const [qtdIng, setQtdIng] = useState(0)
+   const [meioIng, setMeioIng] = useState(0)
+   const [cupom, setCupom] = useState('')
+   const [totalIng, setTotalIng] = useState(0)
+
+   const [novaMeta, setNovaMeta] = useState('')
+   const [listaMetas, setListaMetas] = useState([])
+   const [editando, setEditando] = useState(-1)
+
+   function adicionarMeta () {
+
+
+    if (novaMeta != '') {
+
+        if (editando === -1) {
+    setListaMetas([...listaMetas, novaMeta])
+    setNovaMeta('')
+    }
+
+    else {
+        listaMetas[editando] = novaMeta
+        setListaMetas([...listaMetas])
+        setNovaMeta('')
+        setEditando(-1)
+    }
+    
+    }
+   }
+
+   function teclaApertada (e) {
+      if (e.key === 'Enter') {
+        adicionarMeta()
+      }
+   }
+
+   function removerMeta (idx) {
+     listaMetas.splice(idx,1)
+     setListaMetas([...listaMetas])
+   }
+
+   function alterarMeta(idx) {
+    setNovaMeta(listaMetas[idx])
+    setEditando(idx)
+   }
+
+   
+   function calcularIngresso () {
+    let tot = calcularTotalIngresso(qtdIng, meioIng,cupom)
+    setTotalIng(tot)
+   }
+
 
    function aumentar () {
 
@@ -67,7 +119,60 @@ export default function VarEstado() {
                 <h1>ReactJS | Variável de Estado</h1>
             </header>
 
-            <section className='secao'>
+            <section className='secao-metas'>
+                <h1>Metas para os próximos 5 anos</h1>
+
+                <div className='entrada'>
+                    <input type = 'text' placeholder='Digite a sua meta aqui' onKeyUp={teclaApertada} value={novaMeta} onChange={e => setNovaMeta(e.target.value)}/>
+                    <button onClick={adicionarMeta}>Adicionar</button>
+                </div>
+
+                <ul>
+                {listaMetas.map((item, idx) =>
+                    <li key={idx}> 
+                        <i className='fa fa-pen-to-square' onClick={() => alterarMeta(idx)}></i>
+            
+                        <i className='fa fa-trash-can' onClick={() => removerMeta(idx)}></i>
+                        {item}
+                        
+                        
+                        </li>
+                )}
+                </ul>
+                
+            </section>
+
+            <section className='secao-ing'>
+                <h1>Venda de Ingressos</h1>
+
+                <div className='entrada'>
+                    <div>
+                        <label>Quantidade:</label>
+                        <input type = 'text' value={qtdIng} onChange={e => setQtdIng(e.target.value)}/>
+                    </div>
+
+                    <div>
+                        <label>Meia entrada:</label>
+                        <input type='checkbox' checked={meioIng} onChange={e => setMeioIng(e.target.checked)}/>
+
+                    </div>
+
+                    <div>
+                    <label>Cupom:</label>
+                    <input type = 'text'  value={cupom} onChange={e => setCupom(e.target.value)}/>
+                    </div>
+                     <div>
+                        <label></label>
+                        <button onClick={calcularIngresso}>Calcular</button>
+                     </div>
+                   
+                    <div>
+                        O total é R$ {totalIng}
+                    </div>
+                </div>
+            </section>
+
+            <section className='secao-calc'>
                 <h1>Calculadora</h1>
 
                 <div className='entrada'>
