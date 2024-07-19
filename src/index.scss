@@ -53,6 +53,10 @@
      
     }
 
+    input[type=checkbox] {
+      min-width: auto;
+    }
+
     button {
       background-color: #0084FF;
       color: #fff;

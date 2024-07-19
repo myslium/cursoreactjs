@@ -1,0 +1,81 @@
+
+
+.pagina-varestado {
+
+    background-color: #f5f6fa;
+    min-height: 100vh;
+
+    .cabecalho {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: 30px 50px;
+        gap: 5px;
+
+    a,a:visited,a:link {
+        color: inherit
+    }
+
+    h1 {
+      color: #606060;
+      font: 600 32px 'Montserrat';
+     
+    }
+   
+    }
+
+    .secao {
+        background-color: #fff;
+        padding: 40px;
+        box-shadow: 0px 0px 15px 2px #eeeeee;
+        margin: 50px 60px;
+        max-width: 1000px;
+        border-radius: 8px;
+        font: 400 24px 'Montserrat';
+    
+        h1 {
+          color: #404040;
+          font: 600 28px 'Montserrat';
+          margin-bottom: 30px;
+        }
+
+        .cont {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font: 400 28px 'Montserrat';
+
+           
+        }
+
+        button {
+            background-color: #0084FF;
+            color: #fff;
+      
+            padding: 13px 30px ;
+            border-radius: 2px;
+            border: none;
+            
+            font: 500 20px 'Montserrat';
+            outline: none;
+        }
+
+        input, select {
+            
+          color: #606060;
+          padding: 10px;
+          font: 400 24px 'Montserrat';
+          outline: none;
+          border-radius: 3px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: #e7e7e7;
+          min-width: 400px;
+        }
+         
+        input[type=checkbox] {
+            min-width: auto;
+          }
+       
+    }
+ }
