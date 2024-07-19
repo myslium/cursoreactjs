@@ -2,6 +2,8 @@ import './index.scss'
 
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { tratarNumber } from '../../utils/conversao'
+
 
 export default function VarEstado() {
 
@@ -11,6 +13,10 @@ export default function VarEstado() {
    const [opcao, setOpcao] = useState(true)
    const [titulos4, setTitulos4] = useState('Oie')
    const [descricao, setDescricao] = useState('Oie')
+
+   const [num1, setNum1] = useState(0)
+   const [num2, setNum2] = useState(0)
+   const [res, setRes] = useState(0)
 
    function aumentar () {
 
@@ -26,7 +32,32 @@ export default function VarEstado() {
     }
    }
 
+   function somar () {
+       let soma =tratarNumber(num1) + tratarNumber(num2)
+       setRes(soma)
+   }
+
+   function subtrair() {
+    let sub = tratarNumber(num1) - tratarNumber(num2)
+    setRes(sub)
+}
+
+    function mult() {
+    let multi = (tratarNumber(num1)) * (tratarNumber(num2))
+    setRes(multi)
+    }
+
+    
+    function dividir() {
+        let divir = (tratarNumber(num1)) / tratarNumber(num2)
+        setRes(divir)
+ }
    
+    function pot() {
+    let pote = tratarNumber(num1) ** (tratarNumber(num2))
+    setRes(pote)
+}
+
     return (
         <div className='pagina-varestado'>
             <header className='cabecalho'>
@@ -35,6 +66,24 @@ export default function VarEstado() {
                 </Link>
                 <h1>ReactJS | Variável de Estado</h1>
             </header>
+
+            <section className='secao'>
+                <h1>Calculadora</h1>
+
+                <div className='entrada'>
+                    <input type = 'text' value={num1} onChange={e => setNum1(e.target.value)}/>
+                    <input type = 'text' value={num2} onChange={e => setNum2(e.target.value)}/>
+                    <div>=</div>
+                    <div className='res'> {res} </div>
+                </div>
+                <br /><br />
+                <button  onClick={somar}>Somar</button>
+                <button  onClick={subtrair}>Subtrair</button>
+                <button  onClick={mult}>Multiplicar</button>
+                <button  onClick={dividir}>Divisão</button>
+                <button  onClick={pot}>Potência</button>
+                
+            </section>
 
             <section className='secao'>
                 <h1>Contador</h1>

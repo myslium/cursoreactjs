@@ -39,6 +39,29 @@
           margin-bottom: 30px;
         }
 
+        .entrada {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font: 500 28px 'Montserrat';
+
+            input {
+                min-width: auto;
+                width: 150px;
+            }
+
+            .res {
+                border: 2px dashed #404040;
+                border-radius: 2px;
+                width: 150px;
+                padding: 5px;
+                font: 500 28px 'Montserrat';
+                text-align: center;
+            }
+
+        
+        }
+
         .cont {
             display: flex;
             align-items: center;
