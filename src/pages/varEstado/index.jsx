@@ -27,6 +27,47 @@ export default function VarEstado() {
    const [listaMetas, setListaMetas] = useState([])
    const [editando, setEditando] = useState(-1)
 
+   const [plano, setPlano] = useState('')
+   const [situacao, setSituacao] = useState('')
+   const [cor, setCor] = useState('')
+   const [listaPlanos, setListaPlanos] = useState([])
+
+
+
+
+   {/*function objetos ( ) {
+
+    let pessoa = {
+        nome: 'Bruno',
+        job: 'Dev',
+        tempo: '20 anos'
+    }
+
+    let pessoa2 = {
+        nome: 'mari',
+        job: 'linda',
+        tempo: '17 anos mto gostosa'
+    }
+
+    let pessoas = [pessoa, pessoa2]
+
+    alert(pessoa.nome)
+   }*/}
+
+   function adicionarPlano () {
+      let novoPlano = {
+        titulo: plano,
+        caso: situacao,
+        visual: cor
+      }
+
+      setListaPlanos([...listaPlanos, novoPlano])
+
+        setPlano('')
+        setSituacao('')
+        setCor('')
+   }
+
    function adicionarMeta () {
 
 
@@ -118,6 +159,39 @@ export default function VarEstado() {
                 </Link>
                 <h1>ReactJS | Variável de Estado</h1>
             </header>
+
+            <section className='secao-planos'>
+                <h1>Meus planos atuais</h1>
+
+                <div className='entrada'>
+                    <input type='text' placeholder='Meu plano aqui' value={plano} onChange={e => setPlano(e.target.value)}/>
+                    <input type='text' placeholder='Situação do plano aqui' value={situacao} onChange={e => setSituacao(e.target.value)}/>
+                    <input type='text' placeholder='Cor de identificação' value={cor} onChange={e => setCor(e.target.value)}/>
+                    <button onClick={adicionarPlano}>Adicionar plano</button>
+
+
+                </div>
+
+                <div className='lista'>
+                    {listaPlanos.map((item, idx) =>
+                          <div className='plano' key = {idx}>
+                          <br />
+                      <div style={{backgroundColor: item.visual}}> </div>
+                      <br />
+                          <h1>{item.titulo}</h1>
+                          <h2>{item.caso}</h2>
+                          
+                      </div>
+                    )}
+                    
+                </div>
+
+        
+
+    
+           
+            </section>
+
 
             <section className='secao-metas'>
                 <h1>Metas para os próximos 5 anos</h1>

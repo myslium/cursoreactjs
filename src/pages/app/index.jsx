@@ -36,6 +36,9 @@ function App() {
           <li>
             <Link to = '/varEstado'> Ir para Váriavel de Estado</Link>
           </li>
+          <li>
+            <Link to = '/test'>Ir para teste</Link>
+          </li>
         </ul>
       </section>
     
