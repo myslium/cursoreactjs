@@ -4,7 +4,6 @@ import Contato from './pages/contato';
 import Eventos from './pages/eventos';
 import NaoEncontrado from './pages/notfound';
 import VarEstado from './pages/varEstado';
-import Test from './pages/test';
 
 export default function Navegacao() {
 
@@ -16,7 +15,6 @@ export default function Navegacao() {
                <Route path = '/contato' element = {<Contato/>} />
                <Route path='/eventos' element = {<Eventos/>}/> 
                <Route path = '/varestado' element = {<VarEstado/>}/>
-               <Route path='/test' element = {<Test/>}/>
                
                <Route path='*' element = {<NaoEncontrado/>} />
             

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="pagina-app">
+    <div className="pagina pagina-app">
 
       <header className='cabecalho'> 
          <h1>Estudos de ReactJs
@@ -36,9 +36,7 @@ function App() {
           <li>
             <Link to = '/varEstado'> Ir para Váriavel de Estado</Link>
           </li>
-          <li>
-            <Link to = '/test'>Ir para teste</Link>
-          </li>
+         
         </ul>
       </section>
     

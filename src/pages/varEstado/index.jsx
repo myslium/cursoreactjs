@@ -152,7 +152,7 @@ export default function VarEstado() {
 }
 
     return (
-        <div className='pagina-varestado'>
+        <div className='pagina pagina-varestado'>
             <header className='cabecalho'>
                 <Link to = '/'>
                 <i className='fa fa-arrow-left'></i>

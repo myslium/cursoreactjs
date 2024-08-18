@@ -7,7 +7,7 @@ export default function Contato() {
 
     return (
 
-        <div className='pagina-contato'>
+        <div className='pagina pagina-contato'>
 
             <header className='cabecalho'>
                 <Link to = '/'>

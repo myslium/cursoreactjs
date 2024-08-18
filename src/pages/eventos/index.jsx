@@ -23,7 +23,7 @@ export default function Eventos() {
     }
 
      return (
-        <div className='pagina-eventos'>
+        <div className='pagina pagina-eventos'>
             <header className='cabecalho'>
                 <h1>ReactJS | Eventos</h1>
             </header>
