@@ -1,9 +1,9 @@
 import './index.scss'
 
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { tratarNumber } from '../../utils/conversao'
 import { calcularTotalIngresso } from '../services/ingressos'
+import Cabecalho from '../../components/cabecalho'
 
 export default function VarEstado() {
 
@@ -153,12 +153,7 @@ export default function VarEstado() {
 
     return (
         <div className='pagina pagina-varestado'>
-            <header className='cabecalho'>
-                <Link to = '/'>
-                <i className='fa fa-arrow-left'></i>
-                </Link>
-                <h1>ReactJS | Variável de Estado</h1>
-            </header>
+            <Cabecalho/>
 
             <section className='secao-planos'>
                 <h1>Meus planos atuais</h1>

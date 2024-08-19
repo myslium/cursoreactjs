@@ -1,0 +1,14 @@
+
+.comp-cabecalho {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px 50px;
+    gap: 5px;
+
+    h1 {
+        color: #606060;
+        font: 600 32px 'Montserrat';
+     
+    }
+}

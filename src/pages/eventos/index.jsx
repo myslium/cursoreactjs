@@ -1,5 +1,6 @@
 import './index.scss';
 
+import Cabecalho from '../../components/cabecalho';
 
 export default function Eventos() {
 
@@ -24,10 +25,8 @@ export default function Eventos() {
 
      return (
         <div className='pagina pagina-eventos'>
-            <header className='cabecalho'>
-                <h1>ReactJS | Eventos</h1>
-            </header>
-
+           
+           <Cabecalho/>
             <section className='secao'>
                 <h1> Entendendo eventos</h1>
 

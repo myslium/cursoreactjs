@@ -1,0 +1,18 @@
+
+.comp-contador {
+    
+
+    border: 2px dashed #ebebeb;
+    margin: 0px 10px;
+    padding: 20px;
+    display: inline-block;
+
+
+    .cont {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        font: 500 28px 'Montserrat';
+    }
+}
