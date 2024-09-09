@@ -22,6 +22,20 @@ export default function CartaoFilme(props) {
     return (
         <div className='comp-cartao-filme'>
             <img src = {props.item.url} />
+
+
+            {
+                props.item.estreia != '' && 
+            <div className='estreia'>
+                {
+                    props.item.destaque == true && 
+                    <i className='fa fa-star estrela'></i>
+                }
+              
+                Estriea {props.item.estreia}
+            </div>
+            }
+            
             <p>{props.item.nome}</p>
             <div className={'classificacao ' + idenCla()}> {props.item.classificacao} </div>
         </div>

@@ -5,6 +5,10 @@ import Eventos from './pages/eventos';
 import NaoEncontrado from './pages/notfound';
 import VarEstado from './pages/varEstado';
 import Comps from './pages/comps';
+import RenderizacaoCondicional from './pages/rendCond';
+import Efeitos from './pages/efeitos';
+
+
 
 export default function Navegacao() {
 
@@ -17,6 +21,9 @@ export default function Navegacao() {
                <Route path='/eventos' element = {<Eventos/>}/> 
                <Route path = '/varestado' element = {<VarEstado/>}/>
                <Route path = '/componentes' element = {<Comps/>}/>
+               <Route path = '/rendCond' element = {<RenderizacaoCondicional/>}/>
+               <Route path = '/efeitos' element = {<Efeitos/>}/>
+
 
                <Route path='*' element = {<NaoEncontrado/>} />
             

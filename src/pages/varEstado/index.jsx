@@ -73,7 +73,7 @@ export default function VarEstado() {
 
     if (novaMeta != '') {
 
-        if (editando === -1) {
+     if (editando === -1) {
     setListaMetas([...listaMetas, novaMeta])
     setNovaMeta('')
     }

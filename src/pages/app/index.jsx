@@ -36,6 +36,13 @@ function App() {
           <li>
             <Link to = '/componentes'> Ir para Componentes</Link>
           </li>
+
+          <li>
+            <Link to= '/rendCond'> Ir para Renderização Condicional</Link>
+          </li>
+          <li>
+            <Link to= '/efeitos'>Ir para Efeitos</Link>
+          </li>
          
         </ul>
       </section>

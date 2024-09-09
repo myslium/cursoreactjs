@@ -1,6 +1,9 @@
 
 .comp-cartao-filme {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
     box-shadow: 0px -10px 10px #e2e2e2;
     border-radius: 15px;
@@ -13,6 +16,21 @@
     p {
         font: 500 20px 'Montserrat';
         text-align: center;
+    }
+    .estrela {
+        color: #ffd037;
+    }
+    .estreia {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 7px 30px;
+        border-radius: 100px;
+        background-color: #2b2b2b;
+        color: #fff;
+        font: 500 20px 'Montserrat';
+
     }
     .classificacao {
         display: flex;
